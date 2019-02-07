@@ -1,0 +1,60 @@
+.header__inner {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+%contacts-common-style {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    padding-left: 15px;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+
+    &_logo {
+        font-size: 12px;
+        display: block;
+    }
+
+    &__phone {
+        display: block;    
+        @extend %contacts-common-style;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 2px;
+            background: url('../images/phone.svg');
+            width: 12px;
+            height: 12px;        
+        }
+    }
+
+    &__mail {
+        vertical-align: middle;
+        padding-right: 22px;
+        @extend %contacts-common-style;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: -2px;
+            top: 2px;
+            background: url('../images/mail.svg');
+            width: 15px;
+            height: 15px;        
+        }
+    }
+}
+
+.logo {
+    display: block;
+}
